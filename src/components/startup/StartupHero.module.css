@@ -113,3 +113,17 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+@media (max-width: 768px) {
+  .metaBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+  .name {
+    font-size: 2.25rem;
+  }
+  .epitaph {
+    font-size: var(--text-lg);
+  }
+}

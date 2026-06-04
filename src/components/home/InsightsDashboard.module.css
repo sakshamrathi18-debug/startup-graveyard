@@ -137,3 +137,18 @@
   color: var(--text-primary);
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .overviewCards {
+    grid-template-columns: 1fr;
+  }
+  .listsContainer {
+    grid-template-columns: 1fr;
+  }
+  .card, .listCard {
+    padding: var(--space-lg);
+  }
+  .section {
+    padding: var(--space-xl) 0;
+  }
+}

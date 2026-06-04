@@ -93,3 +93,14 @@
   height: 1px;
   background: var(--border);
 }
+
+@media (max-width: 768px) {
+  .nav {
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    padding: var(--space-sm) 0;
+  }
+  .logoText {
+    font-size: 2.25rem;
+  }
+}
