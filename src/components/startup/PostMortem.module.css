@@ -1,0 +1,30 @@
+.article {
+  margin-bottom: var(--space-3xl);
+}
+
+.sectionTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.rule {
+  height: 2px;
+  background: var(--text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+.firstParagraph::first-letter {
+  float: left;
+  font-family: var(--font-playfair), serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 0.8;
+  padding-right: var(--space-xs);
+  padding-top: var(--space-xs);
+  color: var(--accent-red);
+}

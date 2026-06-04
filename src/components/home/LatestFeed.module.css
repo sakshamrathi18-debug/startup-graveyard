@@ -1,0 +1,111 @@
+.section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-primary);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.header {
+  margin-bottom: var(--space-xl);
+}
+
+.sectionTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.headerRule {
+  height: 2px;
+  background: var(--text-primary);
+  width: 100%;
+}
+
+.feedList {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedRow {
+  display: grid;
+  grid-template-columns: 80px 1fr 180px 120px;
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  align-items: baseline;
+  transition: background-color var(--transition-fast);
+}
+
+.feedRow:hover {
+  background-color: var(--bg-secondary);
+}
+
+.yearCol {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.mainCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.startupName {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.summary {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+}
+
+.categoryCol {
+  text-align: right;
+}
+
+.moneyCol {
+  text-align: right;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.viewAll {
+  margin-top: var(--space-2xl);
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .feedRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .yearCol, .categoryCol, .moneyCol {
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .categoryCol, .moneyCol {
+    display: inline;
+    margin-right: var(--space-md);
+  }
+}

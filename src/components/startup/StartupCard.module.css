@@ -1,0 +1,87 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+  border-left: 3px solid transparent;
+  height: 100%;
+}
+
+.card:hover {
+  border-left-color: var(--accent-red);
+  transform: translateY(-2px);
+  background: var(--bg-secondary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.year {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.content {
+  flex-grow: 1;
+  margin-bottom: var(--space-lg);
+}
+
+.name {
+  font-family: var(--font-playfair), serif;
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2xs);
+  letter-spacing: -0.01em;
+}
+
+.epitaph {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  font-style: italic;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta:last-child {
+  align-items: flex-end;
+}
+
+.label {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+}
+
+.value {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--text-primary);
+}

@@ -1,0 +1,111 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--content-padding);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 2px solid var(--text-primary);
+}
+
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  background: var(--bg-secondary);
+  padding: var(--space-md);
+  border: 1px solid var(--border);
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 300px;
+}
+
+.input, .select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus, .select:focus {
+  border-color: var(--accent-red);
+}
+
+.filters {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.select {
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.resultsCount {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-4xl) 0;
+  color: var(--text-secondary);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.emptyState p {
+  margin-bottom: var(--space-md);
+  font-size: var(--text-lg);
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+  
+  .searchBox, .filters, .select {
+    width: 100%;
+  }
+}

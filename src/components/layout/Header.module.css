@@ -1,0 +1,95 @@
+.header {
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.topRule {
+  height: 4px;
+  background: var(--text-primary);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--content-padding);
+  text-align: center;
+}
+
+.masthead {
+  padding: var(--space-lg) 0 var(--space-md);
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.logo:hover {
+  color: var(--text-primary);
+}
+
+.logoText {
+  font-family: var(--font-playfair), 'Georgia', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  display: block;
+}
+
+.tagline {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-top: var(--space-xs);
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-top: var(--space-md);
+}
+
+.navLink {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--space-xs) 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-red);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.bottomRule {
+  height: 1px;
+  background: var(--border);
+}

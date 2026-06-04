@@ -1,0 +1,33 @@
+.container {
+  margin-top: var(--space-2xl);
+  padding: var(--space-xl);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+}
+
+.title {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.rule {
+  height: 2px;
+  background: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.reasonsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.reasonItem {
+  display: flex;
+  align-items: center;
+}
