@@ -121,7 +121,15 @@ async function runDeepGemmaScraper() {
       
       for (const link of articleLinks) {
         const urlLower = link.toLowerCase();
-        const isFailure = urlLower.includes('shut') || urlLower.includes('bankrupt') || urlLower.includes('closes') || urlLower.includes('acquired') || urlLower.includes('pivot');
+        // Strict URL heuristics to prevent false positives like "closes the gap"
+        const isFailure = 
+          urlLower.includes('shuts-down') || 
+          urlLower.includes('shutting-down') || 
+          urlLower.includes('bankrupt') || 
+          urlLower.includes('closes-doors') || 
+          urlLower.includes('winds-down') || 
+          urlLower.includes('out-of-business');
+          
         if (!isFailure) continue;
         
         console.log(`\n-> Analyzing article: ${link}`);

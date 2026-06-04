@@ -33,7 +33,10 @@ interface StartupExtraction {
   pattern_tags: string[]; // 3-4 short tags like "#healthcare", "#runway"
 }
 
-If any data is not present in the article, use null for nullable fields or make a best-guess estimate if reasonable (like for category/region). If total raised is unknown, use 0.
+If any data is not present in the article, use null for nullable fields or make a best-guess estimate if reasonable. If total raised is unknown, use 0.
+
+CRITICAL: Some articles might be false positives (e.g., "DeepSeek closes the gap" or "Anthropic acquired a company"). If the article is about a healthy, living company, or does NOT describe a startup failing, shutting down, going bankrupt, or having a distress-sale/acqui-hire, you MUST return a JSON object with name: "FALSE_POSITIVE", slug: "false-positive", and death_type: "Unknown". Do NOT extract healthy companies.
+
 ONLY return JSON.
 
 ARTICLE TEXT:

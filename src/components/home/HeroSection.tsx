@@ -7,13 +7,14 @@ export function HeroSection() {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.container}>
-        <h1 className={styles.headline}>
-          The Definitive Record of Failed AI Startups.
-        </h1>
-        <p className={styles.subtitle}>
-          An investigative archive tracking the collapse of ambitious AI ventures—analyzing the missteps, the billions lost in capital, and the cautionary lessons left behind.
-        </p>
+        <div className={styles.content}>
+          <h1 className={styles.headline}>
+            The Indian AI Graveyard
+          </h1>
+          <p className={styles.subtitle}>
+            A definitive record of why Indian founders struggle with artificial intelligence. 
+            Tracing the billions lost and the startups that didn't make it.
+          </p>
 
         <div className={styles.statsRibbon}>
           <div className={styles.stat}>

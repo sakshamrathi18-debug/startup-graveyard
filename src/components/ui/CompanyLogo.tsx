@@ -14,9 +14,8 @@ export function CompanyLogo({ name, slug, size = "small" }: CompanyLogoProps) {
   const [hasError, setHasError] = useState(false);
   const initial = name.charAt(0).toUpperCase();
 
-  // DuckDuckGo maintains a robust favicon cache even for dead domains
-  const domain = `${slug}.com`;
-  const logoUrl = `https://icons.duckduckgo.com/ip3/${domain}.ico`;
+  // Look for the locally downloaded image
+  const logoUrl = `/logos/${slug}.png`;
 
   if (hasError) {
     return (

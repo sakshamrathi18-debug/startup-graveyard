@@ -9,16 +9,18 @@
 }
 
 .fallback {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--border) 100%);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text-primary);
-  font-family: var(--font-playfair), serif;
-  font-weight: 900;
-  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  /* Premium glassmorphism gradient fallback */
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(153, 27, 27, 0.2) 100%);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  backdrop-filter: blur(4px);
+  color: var(--color-error);
+  font-weight: 700;
   position: relative;
   overflow: hidden;
 }
