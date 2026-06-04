@@ -26,11 +26,6 @@ export function HeroSection() {
             <span className={styles.statValue}>{formatMoney(stats.totalCapitalLost)}</span>
             <span className={styles.statLabel}>Capital Lost</span>
           </div>
-          <div className={styles.statDivider} />
-          <div className={styles.stat}>
-            <span className={styles.statValue}>{stats.countryCount}</span>
-            <span className={styles.statLabel}>Countries</span>
-          </div>
         </div>
       </div>
     </section>
