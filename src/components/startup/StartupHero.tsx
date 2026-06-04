@@ -21,6 +21,17 @@ export function StartupHero({ startup }: Props) {
       <div className={styles.headerGroup}>
         <h1 className={styles.name}>{startup.name}</h1>
         <p className={styles.epitaph}>"{startup.one_line_epitaph}"</p>
+        <div style={{ marginTop: 'var(--space-md)' }}>
+          <a 
+            href={`https://www.linkedin.com/search/results/companies/?keywords=${encodeURIComponent(startup.name + ' startup india')}`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn" 
+            style={{ padding: '0.5rem 1.5rem', fontSize: '0.875rem' }}
+          >
+            Find on LinkedIn ↗
+          </a>
+        </div>
       </div>
 
       <div className={styles.metaBar}>

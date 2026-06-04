@@ -16,8 +16,9 @@ export function generateStaticParams() {
 }
 
 // Generate dynamic metadata for SEO
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const startup = getStartupBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const slug = (await params).slug;
+  const startup = getStartupBySlug(slug);
   
   if (!startup) {
     return {
@@ -38,8 +39,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function StartupPage({ params }: { params: { slug: string } }) {
-  const startup = getStartupBySlug(params.slug);
+export default async function StartupPage({ params }: { params: Promise<{ slug: string }> }) {
+  const slug = (await params).slug;
+  const startup = getStartupBySlug(slug);
 
   if (!startup) {
     notFound();
